@@ -6,25 +6,25 @@ public class PRAK101_2510817310008_MAULAMUHAMMADFARRELRABBANI {
         Scanner input = new Scanner(System.in);
         input.useLocale(Locale.US);
 
-        System.out.print("Masukkan Nama Lengkap: ");
+        System.out.print("Masukan Nama Lengkap: ");
         String namaLengkap = input.nextLine();
 
-        System.out.print("Masukkan Tempat Lahir: ");
+        System.out.print("Masukan Tempat Lahir: ");
         String tempatLahir = input.nextLine();
 
-        System.out.print("Masukkan Tanggal Lahir: ");
+        System.out.print("Masukan Tanggal Lahir: ");
         int tanggalLahir = input.nextInt();
 
-        System.out.print("Masukkan Bulan Lahir: ");
+        System.out.print("Masukan Bulan Lahir: ");
         int bulanLahir = input.nextInt();
 
-        System.out.print("Masukkan Tahun Lahir: ");
+        System.out.print("Masukan Tahun Lahir: ");
         int tahunLahir = input.nextInt();
 
-        System.out.print("Masukkan Tinggi Badan: ");
+        System.out.print("Masukan Tinggi Badan: ");
         int tinggiBadan = input.nextInt();
 
-        System.out.print("Masukkan Berat Badan: ");
+        System.out.print("Masukan Berat Badan: ");
         double beratBadan = input.nextDouble();
 
         String[] namaBulan = {

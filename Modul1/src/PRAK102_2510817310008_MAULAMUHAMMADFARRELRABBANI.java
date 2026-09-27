@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class PRAK102_2510817310008_MAULAMUHAMMADFARRELRABBANI {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("Masukkan angka awal: ");
+        System.out.print("Masukan angka awal: ");
         int angka = input.nextInt();
         int i = 0;
 

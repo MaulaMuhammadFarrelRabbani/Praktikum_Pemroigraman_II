@@ -7,10 +7,10 @@ public class PRAK105_2510817310008_MAULAMUHAMMADFARRELRABBANI {
         Scanner input = new Scanner(System.in);
         input.useLocale(Locale.US);
 
-        System.out.print("Masukkan jari-jari: ");
+        System.out.print("Masukan jari-jari: ");
         double jariJari = input.nextDouble();
 
-        System.out.print("Masukkan tinggi: ");
+        System.out.print("Masukan tinggi: ");
         double tinggi = input.nextDouble();
         double volume = PHI * jariJari * jariJari * tinggi;
 
