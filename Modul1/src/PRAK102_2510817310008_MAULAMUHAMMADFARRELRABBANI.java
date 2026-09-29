@@ -7,7 +7,7 @@ public class PRAK102_2510817310008_MAULAMUHAMMADFARRELRABBANI {
         int angka = input.nextInt();
         int i = 0;
 
-        while (i <= 10) {
+        while (i <= 9) {
             int angkaCetak;
 
             if (angka % 5 == 0) {
@@ -17,7 +17,7 @@ public class PRAK102_2510817310008_MAULAMUHAMMADFARRELRABBANI {
             }
             System.out.print(angkaCetak);
 
-            if (i < 10) {
+            if (i < 9) {
                 System.out.print(", ");
             }
             angka++;
