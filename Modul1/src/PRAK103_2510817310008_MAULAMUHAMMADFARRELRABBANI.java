@@ -4,7 +4,16 @@ public class PRAK103_2510817310008_MAULAMUHAMMADFARRELRABBANI {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        int n = input.nextInt();
+        int n;
+        System.out.print("Masukan angka awal: ");
+        do{
+            n = input.nextInt();
+            if (n <= 0){
+                System.out.print("Masukan Ulang: ");
+            }
+        }
+        while (n <= 0);
+
         int bilangan = input.nextInt();
         int dicetak = 0;
         do {
@@ -17,7 +26,6 @@ public class PRAK103_2510817310008_MAULAMUHAMMADFARRELRABBANI {
                 }
             }
             bilangan++;
-
         } while (dicetak < n);
 
         System.out.println();

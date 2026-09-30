@@ -12,35 +12,61 @@ public class PRAK101_2510817310008_MAULAMUHAMMADFARRELRABBANI {
         System.out.print("Masukan Tempat Lahir: ");
         String tempatLahir = input.nextLine();
 
+        int tanggalLahir = 0, bulanLahir = 0, tahunLahir = 0;
+        boolean tanggalValid = false;
+
+    do {
         System.out.print("Masukan Tanggal Lahir: ");
-        int tanggalLahir = input.nextInt();
+        tanggalLahir = input.nextInt();
 
         System.out.print("Masukan Bulan Lahir: ");
-        int bulanLahir = input.nextInt();
+        bulanLahir = input.nextInt();
 
         System.out.print("Masukan Tahun Lahir: ");
-        int tahunLahir = input.nextInt();
+        tahunLahir = input.nextInt();
 
+        int maxHari = 31;
+        if (bulanLahir == 4 || bulanLahir == 6 || bulanLahir == 9 || bulanLahir == 11) {
+            maxHari = 30;
+        } else if (bulanLahir == 2) {
+            // Cek Tahun Kabisat
+            if ((tahunLahir % 4 == 0 && tahunLahir % 100 != 0) || (tahunLahir % 400 == 0)) {
+                maxHari = 29;
+            } else {
+                maxHari = 28;
+            }
+        }
+
+        if (bulanLahir >= 1 && bulanLahir <= 12 && tanggalLahir >= 1 && tanggalLahir <= maxHari && tahunLahir > 0) {
+            tanggalValid = true;
+        } else {
+            System.out.println(">> Tanggal tidak valid.\n");
+        }
+    } while (!tanggalValid);
+
+    int tinggibadan;
+    do{
         System.out.print("Masukan Tinggi Badan: ");
-        int tinggiBadan = input.nextInt();
+        tinggibadan = input.nextInt();
+        if (tinggibadan <= 0) System.out.println(">> ERROR: Tinggi badan harus lebih dari 0!\n");
+    } while (tinggibadan <= 0);
 
+    double beratbadan;
+    do{
         System.out.print("Masukan Berat Badan: ");
-        double beratBadan = input.nextDouble();
+        beratbadan = input.nextDouble();
+        if (beratbadan <= 0) System.out.println(">> ERROR: Berat badan harus lebih dari 0!\n");
+    } while (beratbadan <= 0);
 
         String[] namaBulan = {
                 "", "Januari", "Februari", "Maret", "April", "Mei", "Juni",
                 "Juli", "Agustus", "September", "Oktober", "November", "Desember"
         };
 
-        String bulanStr = "";
-        if (bulanLahir >= 1 && bulanLahir <= 12) {
-            bulanStr = namaBulan[bulanLahir];
-        } else {
-            bulanStr = "(Bulan Tidak Valid)";
-        }
+    String bulanStr = namaBulan[bulanLahir];
+    System.out.println("\nNama Lengkap " + namaLengkap + ", Lahir di " + tempatLahir + " pada Tanggal " + tanggalLahir + " " + bulanStr + " " + tahunLahir);
+        System.out.println("Tinggi Badan " + tinggibadan + " cm dan Berat Badan " + beratbadan + " kilogram");
 
-        System.out.println("Nama Lengkap " + namaLengkap + ", Lahir di " + tempatLahir + " pada Tanggal " + tanggalLahir + " " + bulanStr + " " + tahunLahir);
-        System.out.println("Tinggi Badan " + tinggiBadan + " cm dan Berat Badan " + beratBadan + " kilogram");
         input.close();
     }
 }

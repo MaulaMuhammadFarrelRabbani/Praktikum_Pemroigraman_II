@@ -7,14 +7,22 @@ public class PRAK105_2510817310008_MAULAMUHAMMADFARRELRABBANI {
         Scanner input = new Scanner(System.in);
         input.useLocale(Locale.US);
 
-        System.out.print("Masukan jari-jari: ");
-        double jariJari = input.nextDouble();
+        double jarijari;
+        do{
+            System.out.print("Masukan jari-jari: ");
+            jarijari = input.nextDouble();
+            if (jarijari<= 0) System.out.println("Jari-jari harus lebih besar dari 0.\n");
+        } while (jarijari <= 0);
 
-        System.out.print("Masukan tinggi: ");
-        double tinggi = input.nextDouble();
-        double volume = PHI * jariJari * jariJari * tinggi;
+        double tinggi;
+        do {
+            System.out.print("Masukan tinggi: ");
+            tinggi = input.nextDouble();
+            if (tinggi <= 0) System.out.println("Tinggi harus lebih besar dari 0.\n");
+        } while (tinggi <= 0);
 
-        System.out.print("Volume tabung dengan jari-jari " + jariJari + " cm dan ");
+        double volume = PHI * jarijari * jarijari * tinggi;
+        System.out.print("Volume tabung dengan jari-jari " + jarijari + " cm dan ");
         System.out.println("tinggi " + tinggi + " cm adalah " + String.format(Locale.US, "%.3f", volume) + " m3");
         input.close();
     }
