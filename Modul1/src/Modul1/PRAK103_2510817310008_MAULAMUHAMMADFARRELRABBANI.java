@@ -1,3 +1,5 @@
+package Modul1;
+
 import java.util.Scanner;
 
 public class PRAK103_2510817310008_MAULAMUHAMMADFARRELRABBANI {
